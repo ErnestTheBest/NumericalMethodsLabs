@@ -67,6 +67,7 @@ public class SimpleIterationsMethod {
                     initialMatrix[2][j] = temp1;
                 }
             }
+
             if ((initialMatrix[1][0] == initialMatrix[2][0])){
                 if (initialMatrix[1][1] < initialMatrix[2][1]){
                     for (int j=0;j<4;j++){
