@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class SIMethod {
     public static double nextX = 1;
     public static double valueA, valueB, epsilon, valueX, koefficent, tempFunction, derivative = 0;
