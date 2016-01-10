@@ -1,7 +1,11 @@
 import java.util.Scanner;
+
+
 public class BisectionMethod {
     public static double valueA, valueB, epsilon, valueX = 0;
     public static int iterationsCounter = 0;
+
+
     public static void main(String[] args) {
 
 //Главная программа которая выполняет код
@@ -10,6 +14,7 @@ public class BisectionMethod {
 //Запустить подсчет. Внутри метода есть распечатка промежуточных результатов
         run();
     }
+
     //Метод считающий результаты
     private static void run() {
         double interval = function(valueA) * function(valueB);
