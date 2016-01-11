@@ -1,5 +1,6 @@
 package Lab4.InternetExamples;
 
+
 public class EulersMethod {
     private static void euler (Callable f, double y0, int a, int b, int h) {
         int t = a;
