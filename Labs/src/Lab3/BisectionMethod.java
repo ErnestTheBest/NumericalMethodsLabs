@@ -32,7 +32,7 @@ public class BisectionMethod {
                 System.out.printf("%d) A : %-8.5f  B : %-8.5f  X : %-8.5f\n ",iterationsCounter, valueA, valueB, valueX);
             }
 //Конечные результаты
-            System.out.printf("Результата функции : %-8.6f, с ошибкой : %-8.6f\n", ((valueB+valueA)/2), (valueB-valueA));
+            System.out.printf("Ответ x = : %-8.6f, с ошибкой : %-8.6f\n", ((valueB+valueA)/2), (valueB-valueA));
             System.out.printf("Количество итераций : %d",iterationsCounter);
         } else {
 //В случае если интервал не подходит

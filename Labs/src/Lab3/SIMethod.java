@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class SIMethod {
     public static double nextX = 1;
-    public static double valueA, valueB, epsilon, valueX, koefficent, tempFunction, derivative = 0;
+    public static double valueA, valueB, epsilon, valueX, koefficent, tempFunction, mistake, derivative = 0;
     public static int iterationsCounter = 0;
     public static void main(String[] args) {
 
@@ -27,6 +27,7 @@ public class SIMethod {
     }
     //Метод считающий результаты
     private static void run() {
+
         while (Math.abs(nextX - valueX) > epsilon) {
             if (iterationsCounter !=0){
                 valueX = nextX;
@@ -35,9 +36,10 @@ public class SIMethod {
 //Промежуточные результаты
             iterationsCounter++;
             System.out.printf("X%d = %8.6f\n ", iterationsCounter, nextX);
+            mistake = Math.abs(nextX - valueX);
         }
 //Конечные результаты
-        System.out.println("Конечный Х = " + nextX);
+        System.out.println("Конечный Х = " + nextX + ", с ошибкой : " + mistake);
         System.out.printf("Количество итераций : %d", iterationsCounter);
     }
     //Метод запрашивающий ввод переменных
