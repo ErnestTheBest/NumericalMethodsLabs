@@ -23,7 +23,12 @@ public class GoGoPowereRunge {
         getValues();
         calculateMisc();
         calculateValues();
+        //printValues();
         System.out.println();
+    }
+
+    private static void printValues() {
+
     }
 
     private static void calculateValues() {
