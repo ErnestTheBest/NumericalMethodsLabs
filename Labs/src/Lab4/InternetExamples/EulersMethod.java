@@ -23,7 +23,7 @@ public class EulersMethod {
     }
 }
 
-// interface used so we can plug in alternative functions to Euler
+// interface used so we can plug in alternative functions to Lab4.Final.EulersFinal
 interface Callable {
     public double compute (int time, double t);
 }

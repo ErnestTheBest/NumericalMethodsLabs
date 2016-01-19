@@ -46,7 +46,7 @@ public class RungeKuttaMethod
         }
 
         // Print out the result that we get.
-        System.out.println("Using the Euler method "
+        System.out.println("Using the Lab4.Final.EulersFinal method "
                 + "The value at x=1 is:");
         System.out.println(y);
 

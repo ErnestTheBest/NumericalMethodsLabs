@@ -34,7 +34,7 @@ public class EulerMethod {
         double some = (YValues[0] * a * Math.exp( a * h)) / (a + b * YValues[0] * Math.exp(a*h) - 1);
         System.out.println("Exact y_" + ind_a + " (t) = " + ((YValues[0] * a * Math.exp( a * h)) /
                 (a + b * YValues[0] * Math.exp(a*h) - 1)));
-        System.out.println("Euler y_" + ind_a + " (t) = " + YValues[ind_a]);
+        System.out.println("Lab4.Final.EulersFinal y_" + ind_a + " (t) = " + YValues[ind_a]);
     }
 
     public static void getValues(){
