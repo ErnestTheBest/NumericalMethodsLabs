@@ -7,7 +7,7 @@ public class RungeFinal {
 
         RungeFinal runge = new RungeFinal();
         double x1 = 0;
-        double x2 = 10;
+        double x2 = 30;
         double h1 = 1E-1;
         double y0 = 1;
 

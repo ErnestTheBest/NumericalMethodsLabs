@@ -6,7 +6,7 @@ public class EulersFinal {
 
         EulersFinal eulerss = new EulersFinal();
         double x1 = 0;
-        double x2 = 50;
+        double x2 = 30;
         double h1 = 1E-1;
         double y0 = 1;
 
@@ -18,14 +18,14 @@ public class EulersFinal {
         double y = y0;
         double w = t(x1);
         double difference = 0;
-        double [] maxDif = new double[2];
+        double[] maxDif = new double[2];
         System.out.println("x\tEulers\ty");
-        System.out.format("%.2f\t%.2f\t%.2f\n", x1, y, w);
+        System.out.format("%.2f\t%.2f\t%.2f\t%f\n", x1, y, w, difference);
         while (x < x2) {
             y = calculatePoint(y, h);
             w = t(x);
             difference = y - w;
-            System.out.format("%.2f\t%.2f\t%.2f\n", x, y, w);
+            System.out.format("%.2f\t%.2f\t%.2f\t%f\n", x, y, w, difference);
             x += h;
 
 
