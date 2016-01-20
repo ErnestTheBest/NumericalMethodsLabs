@@ -6,11 +6,9 @@ public class EulersFinal {
 
         EulersFinal eulerss = new EulersFinal();
         double x1 = 0;
-        double x2 = 10;
+        double x2 = 50;
         double h1 = 1E-1;
         double y0 = 1;
-
-        getValues();
 
         eulerss.printPoints(x1, x2, h1, y0);
     }
@@ -19,23 +17,31 @@ public class EulersFinal {
         double x = x1 + h;
         double y = y0;
         double w = t(x1);
+        double difference = 0;
+        double [] maxDif = new double[2];
         System.out.println("x\tEulers\ty");
         System.out.format("%.2f\t%.2f\t%.2f\n", x1, y, w);
         while (x < x2) {
             y = calculatePoint(y, h);
             w = t(x);
+            difference = y - w;
             System.out.format("%.2f\t%.2f\t%.2f\n", x, y, w);
             x += h;
+
+
+            if (Math.abs(maxDif[0]) < Math.abs(difference)) {
+                maxDif[0] = Math.abs(difference);
+                maxDif[1] = x;
+            }
+
         }
+
+        System.out.printf("Максимальная ошибка = " + maxDif[0] + " x = " + maxDif[1]);
     }
 
-    private static void getValues(){
-
-    }
 
     private double calculatePoint(double y, double h) {
         return y + h * f(y);
-        //сюда нужно будет воткнуть метод элера
     }
 
     private double f(double y) {

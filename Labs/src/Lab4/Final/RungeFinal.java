@@ -18,14 +18,26 @@ public class RungeFinal {
         double x = x1 + h;
         double y = y0;
         double w = theoretical(x1);
+        double difference = 0;
+        double [] maxDif = new double[2];
         System.out.println("x\tRunge\ty");
-        System.out.format("%.2f\t%.2f\t%.2f\n", x1, y, w);
+        System.out.format("%.2f\t%.2f\t%.2f\t%.3f\n", x1, y, w, difference);
         while (x < x2) {
             y = calculatePoint(y, h);
             w = theoretical(x);
-            System.out.format("%.2f\t%.2f\t%.2f\n", x, y, w);
+            difference = y - w;
+            System.out.format("%.2f\t%.2f\t%.2f\t", x, y, w);
+            System.out.println(difference);
             x += h;
+
+            if (Math.abs(maxDif[0]) < Math.abs(difference)){
+                maxDif[0] = Math.abs(difference);
+                maxDif[1] = x;
+            }
+
         }
+
+        System.out.printf("Максимальная ошибка = " + maxDif[0] + " x = " +maxDif[1]);
     }
 
     private double calculatePoint(double y, double h) {
@@ -37,7 +49,6 @@ public class RungeFinal {
         f4 = function(y + (h * f3));
 
         return y + (h * (f1 + (2 * f2) + (2 * f3) + f4)/6);
-        //сюда нужно будет воткнуть метод элера
     }
 
     private double function(double y) {
